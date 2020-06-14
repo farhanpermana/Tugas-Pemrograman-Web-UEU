@@ -1,7 +1,6 @@
 <?php
   include('koneksi.php');
   $query = "SELECT * FROM kategori ORDER BY kd_kat DESC";
-
   $result = mysqli_query($koneksi, $query);
 ?>
 <!DOCTYPE html>
@@ -33,7 +32,6 @@
   </div>
   <Label>Harga Barang</Label>
   <div class="input-group mb-3">
-    
   <div class="input-group-prepend">
     <span class="input-group-text">Rp</span>
   </div>
@@ -43,7 +41,6 @@
         <label>Nama Kategori Barang</label>
         <select class="browser-default custom-select" name="kd_kat" required="">
 <option value="">Pilih Nama kategori Barang</option>
-                                                                           
 <?php 
 while($data2= mysqli_fetch_assoc($result)){
  ?>                                   
@@ -56,7 +53,6 @@ while($data2= mysqli_fetch_assoc($result)){
   </div>
       <button class="btn btn-primary btn-lg btn-block" type="submit">Simpan Barang</button>
      <button class="btn btn-secondary btn-lg btn-block" onclick="window.location='index.php';return false;">Batal</button>
-
       </form>
 </div>
   </body>
